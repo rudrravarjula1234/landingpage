@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="main.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          
+            var div = $("#logocontainer");
+            $("#log").hide();
+            div.delay(4000);  
+            
+        div.animate({left: '0%',top: '0%', opacity:'-0.5'}, 3000);
+        $("#log").delay(6000);
+        $("#log").fadeIn(2000);
+
+    
+});
+    </script>
+</head>
+
+<body>
+<div>
+    <img src="img/voisin1.png" id="log">
+</div>
+<div id="logo"> 
+        <div id="logocontainer">
+            <img src="img/voisin.png" alt="VOISIN" class=" topics voisin">
+           <img src="img/v.png" alt="V" class="topics" id="v">
+           <img src="img/i.png" alt="O" class="topics" id="o">
+           <img src="img/u.png" alt="I" class="topics" id="i">
+           <img src="img/s.png" alt="S" class="topics" id="s">
+           <img src="img/o.png" alt="I" class="topics" id="u">
+           <img src="img/n.png" alt="N" class="topics" id="n">
+           
+        
+        </div>
+    </div>
+<script>
+
+
+     (function($){
+        TweenMax.staggerFrom(".topics", 3, {css:{transform:"scale(0)",top:"60%",left:"50%"},ease:Elastic.easeOut}, 0.3);
+     })(jQuery);
+      
+
+</script>          
+      
+</body>
+</html>
